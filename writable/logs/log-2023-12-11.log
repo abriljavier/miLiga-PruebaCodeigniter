@@ -1,0 +1,82 @@
+CRITICAL - 2023-12-11 07:44:14 --> Cannot use [] for reading
+in APPPATH\Views\index.php on line 9.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-11 08:48:19 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-11 09:00:56 --> Undefined variable $ligas
+in APPPATH\Views\index.php on line 8.
+ 1 APPPATH\Views\index.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ligas', 'C:\\xampp\\htdocs\\miliga\\app\\Views\\index.php', 8)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\miliga\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(35): view('index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->delete('2')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-11 09:04:02 --> mysqli_sql_exception: Unknown column 'liga.id' in 'on clause' in C:\xampp\htdocs\miliga\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\miliga\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `jugador...', 0)
+#1 C:\xampp\htdocs\miliga\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jugador...')
+#2 C:\xampp\htdocs\miliga\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jugador...')
+#3 C:\xampp\htdocs\miliga\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `jugador...', Array, false)
+#4 C:\xampp\htdocs\miliga\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\miliga\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\miliga\app\Models\PlayerModel.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\miliga\app\Controllers\Home.php(15): App\Models\PlayerModel->getPlayers()
+#8 C:\xampp\htdocs\miliga\system\CodeIgniter.php(942): App\Controllers\Home->index()
+#9 C:\xampp\htdocs\miliga\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\miliga\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\miliga\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-12-11 09:04:02 --> Unknown column 'liga.id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `jugadores`.*, `liga`.*
+FROM `jugadores`
+JOIN `liga` ON `jugadores`.`liga`=`liga`.`id`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\PlayerModel.php(16): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Home.php(15): App\Models\PlayerModel->getPlayers()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-11 09:05:32 --> Undefined array key "id"
+in APPPATH\Views\index.php on line 9.
+ 1 APPPATH\Views\index.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\miliga\\app\\Views\\index.php', 9)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\miliga\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('index', [], true)
+ 5 APPPATH\Controllers\Home.php(18): view('index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-11 09:36:04 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Home.php on line 35.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\miliga\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-11 10:43:54 --> CSRF token verified.
+CRITICAL - 2023-12-11 10:43:54 --> Allowed fields must be specified for model: "App\Models\PlayerModel"
+in SYSTEMPATH\Model.php on line 736.
+ 1 SYSTEMPATH\Model.php(736): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\PlayerModel')
+ 2 SYSTEMPATH\BaseModel.php(763): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 4 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 5 APPPATH\Controllers\Home.php(29): CodeIgniter\BaseModel->save([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-12-11 10:46:11 --> CSRF token verified.
+INFO - 2023-12-11 10:46:21 --> CSRF token verified.
